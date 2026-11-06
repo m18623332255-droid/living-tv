@@ -1,0 +1,5 @@
+{
+  "schema_version": 1,
+  "description": "仅纳入有对应实机证据的规则。当前没有品牌实机验证记录，未知设备仅扫描。",
+  "profiles": []
+}

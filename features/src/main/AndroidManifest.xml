@@ -1,0 +1,19 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <queries>
+        <intent><action android:name="android.settings.CAST_SETTINGS"/></intent>
+        <intent><action android:name="android.settings.BLUETOOTH_SETTINGS"/></intent>
+    </queries>
+    <application android:usesCleartextTraffic="true">
+        <activity android:name="cn.living.tv.MainActivity" android:exported="true" android:theme="@style/LivingFeaturesTheme" android:screenOrientation="landscape" android:configChanges="keyboard|keyboardHidden|orientation|screenSize"/>
+        <activity android:name="cn.living.tv.PlayerActivity" android:exported="false" android:theme="@style/LivingFeaturesTheme" android:screenOrientation="landscape" android:configChanges="keyboard|keyboardHidden|orientation|screenSize"/>
+        <activity android:name="cn.living.tv.PlayerPortalActivity" android:launchMode="singleTask" android:taskAffinity="${applicationId}.player" android:exported="true" android:label="播放器" android:theme="@style/LivingFeaturesTheme" android:screenOrientation="landscape"/>
+        <activity android:name="cn.living.tv.WeatherPortalActivity" android:exported="true" android:label="时间与天气" android:theme="@style/LivingFeaturesTheme" android:screenOrientation="landscape"/>
+        <activity android:name="cn.living.tv.WallpaperPortalActivity" android:exported="true" android:label="壁纸图库" android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:theme="@style/LivingFeaturesTheme" android:screenOrientation="landscape"/>
+        <activity android:name="cn.living.tv.WallpaperOptionsActivity" android:exported="false" android:theme="@style/LivingFeaturesTheme" android:screenOrientation="landscape"/>
+        <activity android:name="cn.living.tv.DeviceSettingsActivity" android:exported="false" android:theme="@style/LivingFeaturesTheme" android:screenOrientation="landscape"/>
+        <activity android:name="cn.living.tv.FeaturesSettingsActivity" android:exported="true" android:label="播放与天气设置" android:theme="@style/LivingFeaturesTheme" android:screenOrientation="landscape"/>
+    </application>
+</manifest>
